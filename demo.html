@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#14232B"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230B6B6B%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2740%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27 font-weight=%27bold%27%3EL%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/style.css"><title>Démo vidéo — LCAForge</title></head>
+<body><div id="site-header"></div><noscript><p style="padding:12px 20px"><a href="index.html">Accueil</a> · <a href="demo.html">Démo vidéo</a> · <a href="guide.html">Guide fonctionnel</a> · <a href="presentation.html">Présentation</a> · <a href="summary.pdf">Résumé (PDF)</a></p></noscript>
+<main>
+<h1>Démo : du besoin au rapport</h1>
+<p class="lead">Le Copilot rédige un plan à partir d'une demande en langage simple. Vous le relisez, vous le validez, puis il s'exécute dans l'application et produit un rapport PDF.</p>
+<video id="v" controls playsinline preload="metadata" poster="assets/poster.jpg"><source src="assets/demo.mp4" type="video/mp4">Votre navigateur ne lit pas cette vidéo. <a href="assets/demo.mp4">Télécharger la vidéo</a>.</video>
+<p class="note">Vidéo sans son, montée à partir d'enregistrements d'écran de la plateforme. Les passages accélérés sont signalés à l'écran.</p>
+<h2>Chapitres</h2>
+<div class="chapters" id="ch"></div>
+<div class="next"><a class="btn alt" href="index.html">← Accueil</a><a class="btn" href="guide.html">Guide fonctionnel →</a></div>
+</main>
+<div id="site-footer"></div><script src="assets/site.js"></script>
+<script>
+var CH=[{"t": 0, "label": "Introduction"}, {"t": 4.0, "label": "1 · Décrivez votre besoin en langage simple"}, {"t": 12.5, "label": "2 · Le Copilot rédige un plan d'actions"}, {"t": 20.5, "label": "3 · Vous validez : il exécute le plan sous vos yeux"}, {"t": 28.5, "label": "4 · Le rapport PDF est prêt à partager"}, {"t": 37.0, "label": "5 · Même démarche pour comparer des scénarios"}, {"t": 45.8, "label": "6 · Résultats et rapport générés automatiquement"}, {"t": 57.2, "label": "7 · Annuaire des fournisseurs"}, {"t": 68.8, "label": "8 · Facteurs d'émission"}, {"t": 81.2, "label": "9 · LCA Studio : matériaux saisis, impact CO₂e calculé"}, {"t": 105.9, "label": "À vous de jouer"}], v=document.getElementById('v'), box=document.getElementById('ch');
+function fmt(s){var m=Math.floor(s/60),x=Math.floor(s%60);return m+':'+('0'+x).slice(-2)}
+CH.forEach(function(c,i){var b=document.createElement('button');b.innerHTML='<span class="t">'+fmt(c.t)+'</span><span>'+c.label+'</span>';b.onclick=function(){v.currentTime=c.t+0.1;v.play()};box.appendChild(b)});
+v.addEventListener('timeupdate',function(){var k=0;CH.forEach(function(c,i){if(v.currentTime>=c.t)k=i});[].forEach.call(box.children,function(b,i){b.classList.toggle('on',i===k)})});
+</script></body></html>
