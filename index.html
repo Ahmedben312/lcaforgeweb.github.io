@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LCAForge — Carbone, ACV et CBAM pour les industriels tunisiens</title>
+<meta name="description" content="LCAForge : une plateforme pour mesurer le carbone, réaliser des ACV et préparer vos données CBAM.">
+<style>
+:root{--bg:#F7F5F0;--ink:#14232B;--teal:#0B6B6B;--card:#fff;--line:#DDD8CC;--muted:#5a6670}
+@media (prefers-color-scheme:dark){:root{--bg:#14232B;--ink:#F7F5F0;--teal:#5CC8C8;--card:#1F3640;--line:#2f4a56;--muted:#C9D3D6}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 'Helvetica Neue',Arial,sans-serif;padding:max(24px,env(safe-area-inset-top)) 20px 40px}
+main{max-width:560px;margin:0 auto}
+h1{font-size:34px;line-height:1.1;margin:8px 0 6px;color:var(--teal)}
+.lead{color:var(--muted);margin:0 0 24px}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:14px;text-decoration:none;color:inherit}
+a.card:active{transform:scale(.99)}
+a.card b{display:block;font-size:19px;color:var(--teal)}
+a.card span{color:var(--muted);font-size:15px}
+.tip{font-size:14px;color:var(--muted);margin:2px 0 18px}
+footer{margin-top:28px;font-size:15px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>LCAForge</h1>
+<p class="lead">Mesurez votre carbone, réalisez vos ACV et préparez vos données CBAM pour exporter vers l'Europe.</p>
+
+<a class="card" href="presentation.html"><b>Voir la présentation (3 min)</b><span>Bénéfices à l'export, gains de temps et d'argent, agent intelligent</span></a>
+<p class="tip">Astuce : tournez votre téléphone en mode paysage pour lire les diapositives.</p>
+
+<a class="card" id="video" href="#" style="display:none" target="_blank" rel="noopener"><b>Voir la démo vidéo</b><span>L'agent planifie, puis exécute sous vos yeux</span></a>
+
+<a class="card" href="summary.pdf"><b>Lire le résumé détaillé (PDF)</b><span>Le projet, le marché, les sources (en anglais)</span></a>
+
+<footer>[Prénom Nom] · [email] · [téléphone]<br>Sfax, Tunisie</footer>
+</main>
+<script>
+// Colle ici le lien de ta vidéo (YouTube "non répertoriée", Google Drive "toute personne disposant du lien", etc.).
+// Laisse vide pour masquer le bouton.
+var VIDEO_URL = "";
+if (VIDEO_URL) { var v = document.getElementById('video'); v.href = VIDEO_URL; v.style.display = 'block'; }
+</script>
+</body>
+</html>
