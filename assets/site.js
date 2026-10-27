@@ -1,5 +1,5 @@
 // ---- À MODIFIER ICI : coordonnées affichées en bas de chaque page (laisse vide pour masquer) ----
-var SITE = { name: "Ahmed Ben Amar", email: "", phone: "" };
+var SITE = { name: "Ahmed Ben Amar", email: "benamarahmed236@gmail.com", phone: "93585977" };
 // -------------------------------------------------------------------------------------------------
 var PAGES = [["index.html","Accueil"],["demo.html","Démo vidéo"],["guide.html","Guide fonctionnel"],["presentation.html","Présentation"],["summary.pdf","Résumé (PDF)"]];
 (function(){
